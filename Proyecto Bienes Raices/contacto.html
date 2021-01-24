@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie_edge">
+    <title>Bienes Raíces</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" 
+    rel="stylesheet"> <!--fuente traida de google fonts-->
+    <link rel="stylesheet" href="css/normalize.css"> <!--llamada al css de normalizacion-->
+    <link rel="stylesheet" href="css/styles.css"> <!--llamada al css de estilos-->
+</head>
+<body>
+
+    <header class="site-header"> <!--encabezado con clase para CCS-->
+        <div class="contenedor contenido-header"> <!--seccion para que el flexbox solo tome el primer elemento-->
+            <div class="barra"> <!--div para que el flexbox solo tome el primer elemento-->
+
+                <a href="index.html"> <!--click y te lleva al inicio-->
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raíces"> <!--imagen insertada-->
+                </a>
+
+                <nav class="navegacion"> <!--menu de navegacion-->
+                    <a href="nosotros.html">Nosotros</a> <!--link a la pagina-->
+                    <a href="anuncios.html">Anuncios</a> <!--link a la pagina-->
+                    <a href="blog.html">Blog</a> <!--link a la pagina-->
+                    <a href="contacto.html">Contacto</a> <!--link a la pagina-->
+                </nav>
+
+            </div> <!--div para que el flexbox solo tome el primer elemento-->
+        </div> <!--seccion para que el flexbox solo tome el primer elemento-->
+    </header> <!--encabezado-->
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen principal">
+
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class="fw-300 centrar-texto">Llena el formulario de Contacto</h2>
+
+        <form class="contacto" action=""> <!--para crear fomularios-->
+            <fieldset> <!--para argupar partes de formularios-->
+                <legend>Informacion Personal</legend> <!--coloca nombre en un fieldset-->
+                <label for="nombre">Nombre:</label> <!--nombre del campo-->
+                <input type="text" id="nombre" placeholder="Tu Nombre"> <!--ingreso del campo, placeholder texto prev, requiered *-->
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Tu direccion de correo" required>
+
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" placeholder="Tu telefono" required> <!--el name que se borra es para backend-->
+
+                <label for="mensaje">Mensaje: </label>
+                <textarea id="mensaje"></textarea> <!--cuadro de texto responsivo-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Informacion sobre Propiedad</legend>
+                <label for="opciones">Vende o Compra</label>
+                <select id="opciones">
+                    <option value="" disabled selected>--Seleccione--</option>
+                    <option value="Compra">Compra</option>
+                    <option value="Vende">Vende</option> <!--el value es para backend-->
+                </select>
+
+                <label for="cantidad">Cantidad</label>
+                <input type="number" min="0" max="10" step="5"> 
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+                <p>Como desea ser contactado:</p>
+
+                <div class="forma-contacto">
+                    <label for="telefono">Telefono</label> 
+                    <input type="radio" name="contacto" value="telefono" id="telefono"> <!--radio es seleccion manual de opcion con circulo-->
+
+                    <label for="correo">E-Mail</label>
+                    <input type="radio" name="contacto" value="correo" id="correo"> <!--solo un ID por documento,y con el name se agrupan--> 
+                </div>
+
+                <p>Si eligio telefono, elija la fecha y hora</p>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" min="09:00" max="18:00hs">
+            
+            </fieldset>
+
+            <input type="submit" value="Enviar" class="boton boton-verde">
+            
+        </form>
+
+    </main>
+
+    <footer class="site-footer seccion"> <!--pie de pagina, clase para el footer y reuso de clase-->
+        <div class="contenedor-footer contenedor">
+            <nav class="navegacion"> <!--menu de navegacion-->
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav> <!--menu de navegacion-->
+            <p class="copyright">Todos los derechos reservados 2020 &copy;</p> <!--atributo-->      
+        </div>
+    </footer> <!--pie de pagina-->
+
+</body>
+</html>

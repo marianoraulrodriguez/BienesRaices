@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie_edge">
+    <title>Bienes Raíces</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" 
+    rel="stylesheet"> <!--fuente traida de google fonts-->
+    <link rel="stylesheet" href="css/normalize.css"> <!--llamada al css de normalizacion-->
+    <link rel="stylesheet" href="css/styles.css"> <!--llamada al css de estilos-->
+</head>
+<body>
+
+    <header class="site-header"> <!--encabezado con clase para CCS-->
+        <div class="contenedor contenido-header"> <!--seccion para que el flexbox solo tome el primer elemento-->
+            <div class="barra"> <!--div para que el flexbox solo tome el primer elemento-->
+
+                <a href="index.html"> <!--click y te lleva al inicio-->
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raíces"> <!--imagen insertada-->
+                </a>
+
+                <nav class="navegacion"> <!--menu de navegacion-->
+                    <a href="nosotros.html">Nosotros</a> <!--link a la pagina-->
+                    <a href="anuncios.html">Anuncios</a> <!--link a la pagina-->
+                    <a href="blog.html">Blog</a> <!--link a la pagina-->
+                    <a href="contacto.html">Contacto</a> <!--link a la pagina-->
+                </nav>
+
+            </div> <!--div para que el flexbox solo tome el primer elemento-->
+
+        
+        </div> <!--seccion para que el flexbox solo tome el primer elemento-->
+    </header> <!--encabezado-->
+
+    <main class="contenedor">
+        <h1 class="fw-300 centrar-texto">Conoce sobre nosotros</h1>
+        <div class="contenido-nosotros">
+            <div class="imagen">
+                <img src="img/nosotros.jpg" alt="imagen nostros">
+            </div>
+            <div class="texto-nosotros">
+                <blockquote>25 años de experiencia</blockquote>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, minus harum soluta dolorem aperiam 
+                    quibusdam maiores corporis ab, voluptatem deserunt vero asperiores repudiandae delectus consequuntur. 
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis provident asperiores odit ab, 
+                    culpa possimus? Blanditiis quis minus alias iure necessitatibus, corrupti voluptatibus temporibus ut 
+                    distinctio quia? Earum, voluptates quasi.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, minus harum soluta dolorem aperiam 
+                    quibusdam maiores corporis ab, voluptatem deserunt vero asperiores repudiandae delectus consequuntur. 
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis provident asperiores odit ab, 
+                    culpa possimus? Blanditiis quis minus alias iure necessitatibus, corrupti voluptatibus temporibus ut 
+                    distinctio quia? Earum, voluptates quasi.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="contenedor seccion"> <!--seccion con clase general y clase especifica de 3 colum-->
+        <h2 class="fw-300 centrar-texto">Más sobre nosotros</h2> <!--aplico 2 utilidades con la clase-->
+
+        <div class="iconos-nosotros"> <!--div para que el flexbox solo tome el primer elemento-->
+            <div class="icono"> <!--seccion mas pequeña-->
+                <img src="img/icono1.svg" alt="Icono Seguridad"> <!--imagen insertada--> 
+                <h3>Seguridad</h3>
+                <p>Quas facilis error ut quibusdam ab distinctio officia, dolorum harum tempora placeat 
+                    suscipit? Iste, vel exercitationem deleniti maxime hic earum explicabo consectetur?</p>
+            </div>
+            
+            <div class="icono"> <!--seccion mas pequeña-->
+                <img src="img/icono2.svg" alt="Icono el mejor precio"> <!--imagen insertada-->
+                <h3>El mejor precio</h3> 
+                <p>Quas facilis error ut quibusdam ab distinctio officia, dolorum harum tempora placeat 
+                    suscipit? Iste, vel exercitationem deleniti maxime hic earum explicabo consectetur?</p>
+            </div>
+
+            <div class="icono"> <!--seccion mas pequeña-->
+                <img src="img/icono3.svg" alt="Icono A tiempo"> <!--imagen insertada--> 
+                <h3>A tiempo</h3> 
+                <p>Quas facilis error ut quibusdam ab distinctio officia, dolorum harum tempora placeat 
+                    suscipit? Iste, vel exercitationem deleniti maxime hic earum explicabo consectetur?</p>
+            </div>
+        
+        </div> <!--div para que el flexbox solo tome el primer elemento-->
+    </section> <!--seccion-->
+
+    <footer class="site-footer seccion"> <!--pie de pagina, clase para el footer y reuso de clase-->
+        <div class="contenedor-footer contenedor">
+            <nav class="navegacion"> <!--menu de navegacion-->
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav> <!--menu de navegacion-->
+            <p class="copyright">Todos los derechos reservados 2020 &copy;</p> <!--atributo-->      
+        </div>
+    </footer> <!--pie de pagina-->
+
+</body>
+</html>

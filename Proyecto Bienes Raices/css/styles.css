@@ -1,0 +1,403 @@
+html { /* aplica a toooda la pagina */
+    font-size: 62.5%; /* reset para REMS. 62.5% = 10px de 16px */
+    box-sizing: border-box; /* hace que los padding no aumenten el tamaño*/
+}
+
+*, *:before, *:after { /* hace que los padding no aumenten el tamaño*/
+box-sizing: inherit; /* hace que los padding no aumenten el tamaño*/
+}
+
+body { /* aplica a toooda la pagina */
+    font-family: 'Lato', sans-serif; /* fuente traida de google fonts */
+    font-size: 1.6rem; /* tamaño de fuente */
+    line-height: 2; /* tamaño de interlineado */
+}
+
+/* Globales */ /* Utilidades generales -----------------------------------------------------------------*/
+img {
+    max-width: 100%; /* Hace las imagenes responsivas al tamaño de la pantalla*/
+}
+
+
+h1 { /* aplica a toooda la pagina */
+    font-size: 3.8rem;
+}
+
+h2 { /* aplica a toooda la pagina */
+    font-size: 3.4rem;
+}
+
+h3 { /* aplica a toooda la pagina */
+    font-size: 3rem;
+}
+
+h4 { /* aplica a toooda la pagina */
+    font-size: 2.6rem;
+}
+
+.contenedor { /* alinea margenes horizontalmente y ademas ajusta al tamaño de dispositivo */
+    max-width: 120rem; /* tamaño maximo de acuerdo al dispositivo */
+    margin: 0 auto /* reloj. alineacion de margenes */
+}
+
+.seccion { /* ajusta los margenes sup e inf */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 { /* grosor de letra mas fina */
+    font-weight: 300;
+}
+
+.centrar-texto { /* centrar texto */
+    text-align: center;
+}
+
+.d-block{
+    display: block!important; /* utiliza todo el ancho para los margenes y ccon !imp se rompre la ley css*/
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+/* Botones ----------------------------------------------------------------------------------*/
+.boton { /* clase para todos los botones */
+    color: white; /* color de la fuente */
+    font-weight: 700; /* grosor de letra */
+    text-decoration: none; /* sin subrayado */
+    font-size: 1.8rem; /* tamaño de fuente */
+    padding: 1rem 3rem; /* espaciado de texto dentro del boton. 1 arriba 3 izq y der */
+    margin-top: 3rem; /* margen superior */
+    display: inline-block; /* saco el enlace de inline asi puedo tocar los margenes */
+    text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton-amarillo { /* clase para los botones amarillos */
+    background-color: #e08709; /* color de fondo del boton */
+}
+
+.boton-verde { /* clase para los botones verdes */
+    background-color: #71B100; /* color de fondo del boton */
+}
+
+
+/* Header -------------------------------------------------------------------------------------*/
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+
+.site-header.inicio { /* el background del header */
+    background-image: url(../img/header.jpg); /* insertar imagen de fondo */
+    background-position: center center; /* centrar la imagen */
+    background-size: cover; /* ajustar a la pantalla */
+    height: 100vh; /* tamaño ajustable al dispositivo */
+    min-height: 60rem; /* tamaño minimo de la imagen */
+}
+
+.contenido-header { /*el texto del header */
+    height: 100%; /* para que tome toda la imagen de fondo */
+    display: flex;/* llama a flex */
+    flex-direction: column;/* alinear items verticalmente hacia abajo */
+    justify-content: space-between;/* separar barra y titulo */
+}
+
+.contenido-header h1 { /*el titulo principal del header */
+    color: #ffffff; /* se puede usar hexa, rgba, hsla */
+    padding-bottom: 2rem; /* margen inferior */
+    max-width: 60rem; /* tamaño y salto de linea */
+    line-height: 2;
+}
+
+.barra { /* logo y barra de navegacion */
+    display: flex; /* llama a flex */
+    justify-content: space-between; /* separar logo y menu */
+    align-items: center; /* alinear items verticalmente */
+    padding-top: 3rem; /* margen superior */
+}
+
+.navegacion a { /* selecciono manualmente elementos de la barra de navegacion */
+    color: #ffffff; /* se puede usar hexa, rgba, hsla */
+    text-decoration: none; /* para sacar el subrayado */
+    font-size: 1.8rem; /* tamaño de la letra */
+    margin-right: 2rem; /* espacio entre elementos */
+}
+
+.navegacion a:hover { /* pre-pintado elementos de la barra de navegacion */
+    color:#71B100;
+}
+
+.navegacion a:last-of-type { /* selecciono manualmente el ulitmo elemento de la clase */
+    margin-right: 0px; /* espacio ultimo elemento y margen */
+}
+
+/* Iconos-nosotros -------------------------------------------------------------------------------*/
+.iconos-nosotros { /* toda seccion iconos-nostros*/
+    display: flex; /* divide el contenido en la pagina de forma centrada*/
+    justify-content: space-between; /* separar las 3 columnas */
+}
+
+.icono h3 { /* abarca a solo el h3 de iconos-nosotros */
+    text-transform: uppercase;
+}
+
+.icono { /* abarca a cada una de las columnas de iconos-nosotros */
+    flex-basis: calc(33.3% - 1rem); /* divide el 100% del contenido en 3 */
+    text-align: center; /* centra la imagen , el h3 y el parrafo */
+}
+
+/* Anuncios ---------------------------------------------------------------------------------------*/
+.contenedor-anuncios { /* toda seccion anuncios*/
+    display: flex; /* divide el contenido en la pagina de forma centrada*/
+    justify-content: space-between; /* separar las 3 columnas */
+    flex-wrap: wrap; /* acomoda el scroll lateral en vertical */
+}
+
+.anuncio { /* abarca a cada una de las columnas anuncios */
+    flex: 0 0 calc(33.3% - 1rem); /* grow (crecer), shrink (achicar), y basis (cantidad de item por pantalla) */ 
+    border: 1px solid #b5b5b5; /* el borde recibe ancho, tipo y color */
+    background-color: #f5f5f5;
+    margin-bottom: 2rem; /* separacion hacia afuera */
+}
+    
+.contenido-anuncio { /* texto de cada anucion */
+    padding: 2rem; /* margen general */
+}
+
+.contenido-anuncio h3, 
+.contenido-anuncio p { /* asi se coloca 1 prop para dos clases */
+    margin: 0%;
+}
+
+.precio { /* texto del precio */
+    color:#71B100;  /* color del texto */
+    font-weight: 700; /* grosor del texto */
+}
+
+.iconos-caracteristicas {
+    flex: 1; /*para que crezca  */
+    list-style: none; /*sin listado */
+    padding: 0; /* sin margen izquierdo */
+    display: flex; /* prender el flex box, adema junta los iconos */
+    justify-content: space-evenly; /*centra el contendio*/
+    max-width: 500px; /*acotarlo a un tamanio maximo*/
+}
+
+.iconos-caracteristicas li { /*aplica solo al icono */
+    display: flex; /* prender el flex box, adema junta los iconos */
+}
+
+.iconos-caracteristicas img {
+    margin-right: 2rem; /*separacion entre cantidad e icono*/
+}
+
+.ver-todas { /* boton ver todas */
+    display: flex; /* prender el flex box */
+    justify-content: flex-end; /*alineado a la derecha*/
+}
+
+/* Contacto Home -------------------------------------------------------------------------------------*/
+.imagen-contacto { 
+    background-image: url(../img/encuentra.jpg); /* insertar imagen de fondo */
+    background-position: center center; /* centrar la imagen */
+    background-size: cover; /* ajustar a la pantalla */
+    height: 40rem; /* tamaño ajustable al dispositivo */
+    display: flex; /* prendo el flex box */
+    align-items: center; /* centrado de texto verticalmente */
+}
+
+.contenido-contacto { 
+    flex: 1; /* factor de crecimiento. justifica el texto al espacio disponible */
+    color: #ffffff; /* se puede usar hexa, rgba, hsla */
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem; /* tamaño de texto */
+}
+
+/* Seccion inferior -------------------------------------------------------------------------------*/
+.seccion-inferior {
+    display: flex; /* prender el flex box */
+    justify-content: space-between;/*espaciado*/
+}
+
+.seccion-inferior .blog {
+    flex-basis: 60%; /* da un tamaño predeterminado de lo disponible*/
+}
+
+
+.seccion-inferior .testimoniales {
+    flex-basis: calc(40% - 2rem); /* da un tamaño predeterminado de lo disponible*/
+}
+
+.entrada-blog {
+    display: flex; /* prender el flex box */
+    justify-content: space-between; /*espaciado*/
+    margin-bottom: 2rem; /*espaciado vertical entre elementos de abajo*/
+}
+
+.entrada-blog :last-of-type { /*seleccionar el ultimo elemento de la clase*/
+    margin-bottom: 0; /* sacar el espaciado vertical entre elementos de abajo al ultimo*/
+}
+
+.entrada-blog .imagen {
+    flex-basis: 40%; /* da un tamaño predeterminado de lo disponible*/
+}
+
+.entrada-blog .texto-entrada {
+    flex-basis: calc(60% - 3rem); /* da un tamaño predeterminado de lo disponible*/
+}
+
+.texto-entrada a { /*solo afecta al vinculo*/
+    color: #000000; /*cambia el color*/
+    text-decoration: none;
+}
+
+.texto-entrada h4 {
+    margin: 0; /* le saca el margin superior al h4*/
+    line-height: 1.4;  /* modifica el interlineado */
+}
+
+.texto-entrada h4::after { /* crear seudo-elemento despues del h4*/
+    content:""; /*seudo-elemento vacio*/
+    display: block; /*bloqueo su display*/
+    width: 15rem; /*largo*/
+    height: 0.5rem;/*alto*/
+    background-color:#71B100;/*color*/
+    margin-top: 1rem;
+}
+.texto-entrada span { /* span se usa para cosas asi*/
+    color: #e08709 /*color*/
+}
+
+/* Testimoniales -------------------------------------------------------------------------------*/
+.testimonial {
+    background-color: #71B100; /*color*/
+    font-size: 2.4rem; /*tamaño letra*/
+    padding: 2rem; /*espacio hacia adentro*/
+    color: #ffffff; /*color*/
+    border-radius: 2rem; /*aplicar borde redondeado al recuadro*/
+}
+
+.testimonial p {
+    text-align: right; /*alinear texto del parrafo para la derecha*/
+}
+
+.testimonial blockquote::before {
+    content: ""; /*seudo-elemento vacio*/
+    background-image: url(../img/comilla.svg); /*imagen insertada*/
+    width: 4rem; /*largo*/
+    height: 4rem; /*alto*/
+    position: absolute; /*el hijo puede usar propiedades*/
+    left: -2rem; /* usando las propiedades*/
+}
+
+.testimonial blockquote {
+    position: relative;   /*el padre indica donde estara el hijo*/
+    padding-left: 5rem; /* moviendo el texto para la derecha*/
+    font-weight: 300; /* grosor de letra*/
+}
+
+/* Footer -------------------------------------------------------------------------------*/
+.site-footer {
+    background-color: #333333; /* color de fondo*/
+    margin: 0; /* margen inferior*/
+}
+.contenedor-footer {
+    padding: 3rem 0; /* 3 arriba, abajo y 0 izq, der*/
+    display: flex; /* prender el flex box */
+    justify-content: space-between; /*espaciado*/
+}
+.copyright {
+    margin: 0; /* margen inferior*/
+    color: #ffffff; /*color*/
+}
+
+/* PAGINAS INTERNAS ---------------------------------------------------------------------------*/
+/*Nosotros*/
+.contenido-nosotros {
+    display: grid; /*funciona como el flexbox pero por columnas*/
+    grid-template-columns: repeat(2 , 1fr); /*defino las columnas del grid con 2 fracciones*/
+    grid-column-gap: 2rem; /*espaciado entre las columnas del grid con 2 fracciones*/
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900; /*grosor de letra*/
+    font-size: 2rem; /*tamaño letra*/
+    margin: 0; /*margen*/
+    padding: 1rem 0 3rem 0; /*espacio hacia adentro*/
+}
+/*Anuncio*/
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;  /*alinea horizontalmente*/
+    align-items: center; /*alinea vertixcalmente*/
+}
+/*Contacto*/
+.contacto p {
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+
+legend {
+    font-size: 2rem;
+    color: #333333;
+}
+
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block; /*tomar espacio disponible*/
+} 
+
+input[type="text"] { /*selector de atributo*/
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input:not([type="submit"]), /*selecciona todos los inputs menos el que esta dentro del not*/
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    height: 20rem;
+}
+
+.forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
