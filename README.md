@@ -1,3 +1,3 @@
 # Bienes Raices
-Proyecto Bienes Raices
-Desarrollado con HTML5 + CSS3
+Desarrollo de una pagina web para una empresa de Bienes Raices
+aplicando las tecnologias HTML5 + CSS3
